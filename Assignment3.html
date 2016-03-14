@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>Assignment 3</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+	
+	<script type="text/javascript">
+
+
+		var myApp=angular.module("myModule",[]);
+		myApp.controller("myController",function($scope){
+			$scope.showAlert=function(){
+				alert("Congo!! U clicked it Twice!!! No title awarded :P ")
+			};
+		});
+	</script>
+</head>
+<body>
+<div ng-app="myModule">
+	<div ng-controller="myController">
+	<h2>Double Click to see new title awarded to you</h2>
+
+	<input type="button" ng-dblclick="showAlert()" value="Click-Me">
+	</div>
+</div>
+
+</body>
+
+</html>
